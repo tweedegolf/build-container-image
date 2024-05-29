@@ -30,11 +30,6 @@ inputs:
     required: false
     default: "Dockerfile"
     type: string
-  artifact:
-    description: "Download artifact with this name"
-    required: false
-    default: ""
-    type: string
   no-cache:
     description: "Set to false to enable caching of docker layers"
     required: false
@@ -46,9 +41,8 @@ inputs:
     default: true
     type: boolean
   token:
-    description: "GitHub token for pushing"
-    required: false
-    default: ""
+    description: "GitHub token for logging into the ghcr container registry"
+    required: true
     type: string
 
 runs:
