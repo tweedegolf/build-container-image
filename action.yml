@@ -13,7 +13,7 @@ inputs:
   platforms:
     description: "Comma separated list of platforms to build the image for, i.e. 'linux/amd64,linux/arm64'"
     required: false
-    default: ""
+    default: "linux/amd64"
     type: string
   context:
     description: "Context directory for the container image build"
