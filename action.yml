@@ -45,6 +45,11 @@ inputs:
     required: false
     type: string
     default: ${{ github.token }}
+  load:
+    description: "Make the built image available to the current job. Load is a shorthand for `--output=type=docker`"
+    required: false
+    type: boolean
+    default: false
 
 runs:
   using: composite
@@ -73,3 +78,4 @@ runs:
         build-args: "${{ inputs.build-args }}"
         push: ${{ inputs.push }}
         tags: "${{ inputs.tags }}"
+        load: "${{ inputs.load }}"
